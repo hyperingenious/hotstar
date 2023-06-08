@@ -1,0 +1,1 @@
+{"version":3,"sources":["src\\styles\\style.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;;AAEF;EACE","file":"style.14a63342.css","sourceRoot":"..","sourcesContent":["* {\r\n  margin: 0;\r\n  padding: 0;\r\n  box-sizing: border-box;\r\n}\r\n.head {\r\n  color: red;\r\n}\r\n"]}
