@@ -5,6 +5,9 @@ header {
   position: fixed;
   top: 0;
   align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 ul {
@@ -13,15 +16,34 @@ ul {
     display: flex;
     align-items: center;
     padding: 1.1rem 0rem;
+    transition: 0.3s;
     svg {
       width: 1.2rem;
       height: 1.2rem;
       margin-right: 1.3rem;
       margin-left: 2rem;
+      transition: 0.3s ease-in-out;
     }
-    p{
-       font-size: 13px;
-    color: #a1a1a3;
+    p {
+      font-size: 13px;
+      color: #a1a1a3;
+      transition: 0.3s ease-in-out;
     }
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateX(-1.3rem);
+}
+.nav-list:hover{
+  scale: 1.1;
+ p{
+  color: white;
+ }
+}
+.highlight {
+  scale: 1.1;
+  & > p {
+    color: white;
   }
 }
