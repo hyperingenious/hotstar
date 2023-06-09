@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  height: 100vh;
+  min-width: 3rem;
+  position: fixed;
+  top: 0;
+  align-items: center;
+}
+
+ul {
+  color: white;
+  li {
+    display: flex;
+    align-items: center;
+    padding: 1.1rem 0rem;
+    svg {
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-right: 1.3rem;
+      margin-left: 2rem;
+    }
+    p{
+       font-size: 13px;
+    color: #a1a1a3;
+    }
+  }
+}

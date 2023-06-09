@@ -1,11 +1,41 @@
+header {
+  display: flex;
+  height: 100vh;
+  min-width: 3rem;
+  position: fixed;
+  top: 0;
+  align-items: center;
+}
+
+ul {
+  color: white;
+}
+ul li {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 0rem;
+}
+ul li svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 1.3rem;
+  margin-left: 2rem;
+}
+ul li p {
+  font-size: 13px;
+  color: #a1a1a3;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Inter", sans-serif;
 }
 
-.head {
-  color: red;
+body {
+  background-color: #0f1014;
+  width: 100%;
 }
 
 /*# sourceMappingURL=/style.14a63342.css.map */

@@ -1,8 +1,12 @@
+@import "navbar", 'basic';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.head {
-  color: red;
+  font-family: 'Inter', sans-serif;
+}   
+body{
+    background-color:$theme-bg;
+    width: 100%;
 }
