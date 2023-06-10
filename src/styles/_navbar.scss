@@ -3,6 +3,7 @@ header {
   height: 100vh;
   min-width: 3rem;
   position: fixed;
+  z-index: 20;
   top: 0;
   align-items: center;
   &:hover {
@@ -18,14 +19,14 @@ ul {
     padding: 1.1rem 0rem;
     transition: 0.3s;
     svg {
-      width: 1.2rem;
-      height: 1.2rem;
+      width: 1.4rem;
+      height: 1.4rem;
       margin-right: 1.3rem;
       margin-left: 2rem;
       transition: 0.3s ease-in-out;
     }
     p {
-      font-size: 13px;
+      font-size: 16px;
       color: #a1a1a3;
       transition: 0.3s ease-in-out;
     }
@@ -35,11 +36,12 @@ ul {
   opacity: 0;
   transform: translateX(-1.3rem);
 }
-.nav-list:hover{
-  scale: 1.1;
- p{
-  color: white;
- }
+.nav-list:hover {
+  scale: 1.12;
+  p {
+    color: white;
+    font-weight: 600;
+  }
 }
 .highlight {
   scale: 1.1;
@@ -47,3 +49,4 @@ ul {
     color: white;
   }
 }
+
