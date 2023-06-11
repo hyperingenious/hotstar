@@ -6,19 +6,19 @@
   left: 0;
   width: 100%;
   height: 100%;
-  // background: linear-gradient(
-  //   272deg,
-  //   rgb(0 0 0 / 26%) 73.08%,
-  //   rgb(15 16 20 / 32%) 77.84%,
-  //   rgb(15 16 20 / 16%) 79.74%,
-  //   #0f1014
-  // );
-  background: llinear-gradient(
-    259deg,
-    rgb(0 0 0 / 62%) 0%,
-    rgb(11 23 31 / 24%) 46%,
-    rgb(31, 31, 31) 100%
+  background: linear-gradient(
+    272deg,
+    rgb(0 0 0 / 26%) 73.08%,
+    rgb(15 16 20 / 32%) 77.84%,
+    rgb(15 16 20 / 16%) 79.74%,
+    #0f1014
   );
+  // background: linear-gradient(
+  //   259deg,
+  //   rgb(0 0 0 / 62%) 0%,
+  //   rgb(11 23 31 / 24%) 46%,
+  //   rgb(31, 31, 31) 100%
+  // );
 }
 .top-banner {
   width: 100%;
@@ -29,15 +29,18 @@
   overflow: hidden;
 
   video {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
+    z-index: -1;
   }
 }
-
+h1{
+  background: $theme-bg;
+}
 .trailer-data {
   bottom: 6rem;
   display: flex;

@@ -1,8 +1,12 @@
 import icons from "../../../src/img/navicons.svg";
+import View from '../view/View'
 
-class AsideView {
+class AsideView extends View{
   _parentElement = document.querySelector("header");
 
+  /**
+   * This can be fixed but I have not decided to fix it yet
+   */
   //   svgGlowHandler() {
   //     this._parentElement.querySelectorAll(".nav-list").forEach((e) => {
   //       let svgPath;
