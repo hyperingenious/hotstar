@@ -1,7 +1,7 @@
 import icons from "../../../src/img/navicons.svg";
-import View from '../view/View'
+import View from "../view/View";
 
-class AsideView extends View{
+class AsideView extends View {
   _parentElement = document.querySelector("header");
 
   /**
@@ -25,13 +25,13 @@ class AsideView extends View{
   //     });
   //   }
   mouseoverHandler() {
-    const ul = this._parentElement.querySelector("ul");
-    ul.addEventListener("mouseover", this.handler.bind(this));
+    // const ul = this._parentElement.querySelector("ul");
+    this._parentElement.addEventListener("mouseover", this.handler.bind(this));
   }
 
   mouseoutHandler() {
     const ul = this._parentElement.querySelector("ul");
-    ul.addEventListener("mouseout", this.handler.bind(this));
+    this._parentElement.addEventListener("mouseout", this.handler.bind(this));
   }
 
   handler(e) {
