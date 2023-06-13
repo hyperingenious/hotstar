@@ -1,46 +1,37 @@
 import View from "../view/View";
-import { CARAOUSEL_CONTENT } from "../configure.js";
+import { CARAOUSEL_CONTENT } from "../config.js";
 
 export default class CarouselView extends View {
-  movieCaraouselMarkup() {
+  renderCaraousel(content) {
+    const contentBox = document.querySelector(".after-header");
+
+    contentBox.insertAdjacentHTML(
+      "beforeend",
+      this._movieCaraouselMarkup(content)
+    );
+    this._parentElement = document.querySelector(
+      `.${content.category}-caraousel`
+    );
+    this._makeMeMove();
+  }
+
+  _movieCaraouselMarkup(content) {
     return `
-        <section class="movie-carousel">
-          <h3 class="movie-section-head">Movies to you</h3>
+        <section class="${content.category}-caraousel caraousel">
+          <h3 class="movie-section-head">${content.title}</h3>
           <div class="movie-list">
+          ${content.movies
+            .map((data) => {
+              return `
             <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
+              <a href="${data.url}">
+                <img src="${data.img}" alt="" />
+              </a>
             </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
+            `;
+            })
+            .join("")}
             </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-            <div class="movie">
-              <a href="#"><img src="src/img/dummy-movie-image.png" alt="" /></a>
-            </div>
-          </div>
           <div class="caraousel__btn">
           <button class="movie-caraousel__btn caraousel__btn--left"><</button>
           <button class="movie-caraousel__btn caraousel__btn--right">></button>
@@ -49,7 +40,7 @@ export default class CarouselView extends View {
         `;
   }
 
-  makeMeMove() {
+  _makeMeMove() {
     const btnLeft = this._parentElement.querySelector(".caraousel__btn--left");
     const btnRight = this._parentElement.querySelector(
       ".caraousel__btn--right"

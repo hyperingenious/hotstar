@@ -3,19 +3,19 @@
 }
 .movie-list {
   display: flex;
-  height: 13rem;
+  height: 17rem;
   overflow: hidden;
 }
 
 .movie {
   transition: 0.8s;
-display: flex;
-    margin: 0 0.2rem;
-    flex-direction: column;
+  display: flex;
+  margin: 0 0.2rem;
+  flex-direction: column;
   a {
     display: inline-block;
-    width: 8.5rem;
-    height: 12rem;
+    width: 12rem;
+    height: 17rem;
     position: relative;
     transition: 0.3s ease-in;
     img {
