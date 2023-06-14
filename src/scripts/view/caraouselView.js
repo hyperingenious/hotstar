@@ -4,7 +4,10 @@ import { CARAOUSEL_CONTENT } from "../config.js";
 
 export default class CarouselView extends View {
 
-  
+  /**
+   * append the caraousel to HTML, make it working
+   * @param {Object} content data for caraousel in object
+   */
   renderCaraousel(content) {
     const contentBox = document.querySelector(".after-header");
 
@@ -17,8 +20,12 @@ export default class CarouselView extends View {
     );
     this._makeMeMove();
   }
-
-  _movieCaraouselMarkup(content) {
+/**
+ * Generates markup for caraousel 
+ * @param {Object} content receives data for caraousel
+ * @returns caraousel markup
+ */
+  _movieCaraouselMarkup() {
     return `
         <section class="${content.category}-caraousel caraousel">
           <h3 class="movie-section-head">${content.title}</h3>
@@ -42,7 +49,9 @@ export default class CarouselView extends View {
         </section>
         `;
   }
-
+/**
+ * Add event Handler to caraousel to move left and right <    >
+ */
   _makeMeMove() {
     const btnLeft = this._parentElement.querySelector(".caraousel__btn--left");
     const btnRight = this._parentElement.querySelector(

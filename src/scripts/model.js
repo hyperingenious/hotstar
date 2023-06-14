@@ -1,7 +1,9 @@
 export const state = {
   watchlist: [],
 };
-
+/**
+ * Data about movies to be rendered on page
+ */
 export const content = [
   {
     category: "action",

@@ -31,7 +31,7 @@ const infiniteScrollHandler = function () {
       const priorityObject =
         model.content[findPriority(model.content, loadPriority)];
       setTimeout(() => {
-        console.log("iam here")
+        console.log("iam here");
         loadPriority = loadPriority + 1;
       }, 300);
     }
@@ -41,37 +41,29 @@ const infiniteScrollHandler = function () {
     rootMargin: "0px",
     threshold: 0.1,
   });
-  observer.observe(document.querySelector('.footer'))
+  observer.observe(document.querySelector(".footer"));
 };
 
 /**
- * A function which should be immediately called as soon as the page loads
+ * To be called as soon as page loads
  */
 const init = function () {
-  // 1. adding the movseover and mouseout handlers to the aside bar as soon as the page loads
-       asideView.mouseoverHandler()
-       asideView.mouseoutHandler()
+  // 1. adding movseover & mouseout handlers asidebar
+  asideView.mouseoverHandler();
+  asideView.mouseoutHandler();
 
-  // 2. Rendering the 'action' and 'comedy' caraousel as soon as the page loads
+  // 2. Rendering 'action' & 'comedy' section
   actionCaraouselView.renderCaraousel(
     model.content[objectIndex(model.content, "action")]
   );
   comedyCaraouselView.renderCaraousel(
     model.content[objectIndex(model.content, "comedy")]
-    
-    
   );
 
-
-  
-
-  // 3. after the 'action' and 'comedy' caraousels are loaded we want to load more caraousels if the user scrolls more so we have implemented the 'infinite scrolling'
+  // 3. to implement infinite scrolling
   infiniteScrollHandler();
 };
 init();
-
-
-
 
 /*
 window.addEventListener("scroll", function () {
@@ -84,3 +76,22 @@ window.addEventListener("scroll", function () {
   }
 });
 */
+
+const url = "https://imdb8.p.rapidapi.com/auto-complete?q=avengers";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "ee32fbfbb8msh828628ab834c24ep19afbbjsnc878fd0c14be",
+    "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
+  },
+};
+const api = async function () {
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+};
+api();
