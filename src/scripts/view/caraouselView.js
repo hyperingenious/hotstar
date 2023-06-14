@@ -1,7 +1,10 @@
 import View from "../view/View";
 import { CARAOUSEL_CONTENT } from "../config.js";
 
+
 export default class CarouselView extends View {
+
+  
   renderCaraousel(content) {
     const contentBox = document.querySelector(".after-header");
 
@@ -20,21 +23,21 @@ export default class CarouselView extends View {
         <section class="${content.category}-caraousel caraousel">
           <h3 class="movie-section-head">${content.title}</h3>
           <div class="movie-list">
-          ${content.movies
-            .map((data) => {
-              return `
-            <div class="movie">
-              <a href="${data.url}">
-                <img src="${data.img}" alt="" />
-              </a>
-            </div>
-            `;
-            })
-            .join("")}
+              ${content.movies
+                .map((data) => {
+                  return `
+                <div class="movie">
+                  <a href="${data.url}">
+                    <img src="${data.img}" alt="" />
+                  </a>
+                </div>
+                `;
+                })
+                .join("")}
             </div>
           <div class="caraousel__btn">
-          <button class="movie-caraousel__btn caraousel__btn--left"><</button>
-          <button class="movie-caraousel__btn caraousel__btn--right">></button>
+            <button class="movie-caraousel__btn caraousel__btn--left"><</button>
+            <button class="movie-caraousel__btn caraousel__btn--right">></button>
           </div>
         </section>
         `;
