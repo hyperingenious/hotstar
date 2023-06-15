@@ -53,12 +53,12 @@ const init = function () {
   asideView.mouseoutHandler();
 
   // 2. Rendering 'action' & 'comedy' section
-  actionCaraouselView.renderCaraousel(
-    model.content[objectIndex(model.content, "action")]
-  );
-  comedyCaraouselView.renderCaraousel(
-    model.content[objectIndex(model.content, "comedy")]
-  );
+  // actionCaraouselView.renderCaraousel(
+  //   model.content[objectIndex(model.content, "action")]
+  // );
+  // comedyCaraouselView.renderCaraousel(
+  //   model.content[objectIndex(model.content, "comedy")]
+  // );
 
   // 3. to implement infinite scrolling
   infiniteScrollHandler();
@@ -76,6 +76,7 @@ window.addEventListener("scroll", function () {
   }
 });
 */
+// if (module.hot) module.hot.accept();
 
 const url = "https://imdb8.p.rapidapi.com/auto-complete?q=avengers";
 const options = {
@@ -94,4 +95,4 @@ const api = async function () {
     console.error(error);
   }
 };
-api();
+// api();

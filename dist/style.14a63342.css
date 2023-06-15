@@ -13,6 +13,7 @@ header:hover {
 
 ul {
   color: white;
+  margin-left: 0 !important;
 }
 ul li {
   display: flex;
@@ -20,16 +21,17 @@ ul li {
   padding: 1.1rem 0rem;
   transition: 0.3s;
 }
-ul li svg {
-  width: 1.4rem;
-  height: 1.4rem;
+ul li .nav-svg {
+  font-size: 1.4rem;
   margin-right: 1.3rem;
   margin-left: 2rem;
+  color: #9c9d9f;
   transition: 0.3s ease-in-out;
 }
 ul li p {
   font-size: 16px;
   color: #a1a1a3;
+  margin-bottom: 0 !important;
   transition: 0.3s ease-in-out;
 }
 
@@ -38,10 +40,11 @@ ul li p {
   transform: translateX(-1.3rem);
 }
 
-.nav-list:hover {
+.nav-list:hover .nav-svg {
   scale: 1.12;
 }
 .nav-list:hover p {
+  scale: 1.12;
   color: white;
   font-weight: 600;
 }
@@ -83,7 +86,7 @@ ul li p {
 }
 
 h1 {
-  background: #0f1014;
+  background: #15171e;
 }
 
 .trailer-data {
@@ -171,7 +174,7 @@ h1 {
 }
 
 .after-header {
-  background: #0f1014;
+  background: #15171e;
   padding-left: 7rem;
   color: hsla(0, 0%, 100%, 0.84);
   padding-top: 1rem;
@@ -222,7 +225,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Arial, Helvetica, Sans-serif;
-  background-color: #0f1014;
+  background-color: #15171e;
 }
 
 .dummy_page {
@@ -239,7 +242,7 @@ html, body {
   width: 100%;
   position: relative;
   height: auto;
-  background-color: #0f1014;
+  background-color: #15171e;
   padding-left: 7rem;
 }
 
@@ -263,7 +266,7 @@ html, body {
   color: rgba(255, 255, 255, 0.2);
   font-weight: normal;
   text-transform: uppercase;
-  background: #0f1014;
+  background: #15171e;
   letter-spacing: 0.25em;
 }
 
@@ -343,6 +346,63 @@ html, body {
     width: 100%;
   }
 }
+.search-bar {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-icon {
+  float: left;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+/*Results*/
+.results {
+  margin-left: 7rem;
+}
+.results .top-result {
+  display: flex;
+  color: white;
+}
+.results .top-result img {
+  border-radius: 3px;
+  width: 100px;
+  height: 200px;
+  margin-right: 2rem;
+}
+
+.other-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 3rem;
+}
+.other-results .other-result-card {
+  display: flex;
+  flex-direction: column;
+}
+.other-results .other-result-card img {
+  width: 100px;
+  height: 200px;
+}
+.other-results .other-result-card .other-result-movie-name {
+  font-size: 0.7rem;
+  color: white;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -351,7 +411,7 @@ html, body {
 }
 
 body {
-  background-color: #0f1014;
+  background-color: #15171e;
   width: 100%;
 }
 

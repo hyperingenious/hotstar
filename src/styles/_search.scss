@@ -1,0 +1,54 @@
+.search-bar {
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-icon {
+  float: left;
+  margin-right: 10px;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+/*Results*/
+.results {
+  margin-left: 7rem;
+  .top-result {
+    display: flex;
+    color: white;
+    img {
+      border-radius: 3px;
+      width: 100px;
+      height: 200px;
+      margin-right: 2rem;
+    }
+  }
+}
+.other-results {display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 3rem;
+  .other-result-card {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100px;
+      height: 200px;
+    }
+    .other-result-movie-name {
+      font-size: 0.7rem;
+color: white;
+    }
+  }
+}

@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotstar</title>
 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
     <!-- scripts -->
-    <script type="module" src="src/scripts/controller.js"></script>
+    <script defer type="module" src="src/scripts/controller.js"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <!-- All the imported fonts INTER -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -185,38 +188,41 @@
       </symbol>
     </svg>
 
-    
     <header>
       <nav>
         <ul>
           <li class="profile nav-list">
-            <svg class="nav-svg"><use href="#profile"></use></svg>
+            <!-- <svg class="nav-svg"><use href="#profile"></use></svg> -->
+            <i class="nav-svg ph-bold ph-user"></i>
             <p class="nav-name hidden">My Space</p>
           </li>
           <li class="search nav-list">
-            <svg class="nav-svg"><use href="#search"></use></svg>
+            <!-- <svg class="nav-svg"><use href="#search"></use></svg> -->
+            <i class="nav-svg ph-bold ph-magnifying-glass"></i>
             <p class="nav-name hidden">Search</p>
           </li>
           <li class="home nav-list">
-            <svg class="nav-svg"><use href="#home"></use></svg>
+            <!-- <svg class="nav-svg"><use href="#home"></use></svg> -->
+            <i class="nav-svg ph-bold ph-house"></i>
             <p class="nav-name hidden">Home</p>
           </li>
           <li class="tv nav-list">
-            <svg class="nav-svg"><use href="#tv"></use></svg>
+            <!-- <svg class="nav-svg"><use href="#tv"></use></svg> -->
+            <i class="nav-svg ph-bold ph-television-simple"></i>
             <p class="nav-name hidden">TV</p>
           </li>
           <li class="movies nav-list">
-            <svg class="nav-svg"><use href="#movies"></use></svg>
+            <!-- <svg class="nav-svg"><use href="#movies"></use></svg> -->
+            <i class="nav-svg ph-bold ph-film-slate"></i>
             <p class="nav-name hidden">Movies</p>
           </li>
           <li class="sports nav-list">
-            <svg class="nav-svg"><use href="#sports"></use></svg>
-            <p class="nav-name hidden">Sports</p>
+            <!-- <svg class="nav-svg"><use href="#sports"></use></svg> --><i class="nav-svg ph-bold ph-baseball"></i>
+            <p class="nav-name hidden"><a href="search.html">Sports</a></p>
           </li>
         </ul>
       </nav>
     </header>
-   
 
     <div class="movies-container">
       <!-- TOP SECTION STARTS- sections which contains all the trailers -->
@@ -325,13 +331,9 @@
           <div class="col social">
             <h1>Social</h1>
             <ul>
-              <li>
-              </li>
-              <li>
-      
-              </li>
-              <li>
-              </li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
           </div>
           <div class="clearfix"></div>

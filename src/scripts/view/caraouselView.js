@@ -25,7 +25,7 @@ export default class CarouselView extends View {
  * @param {Object} content receives data for caraousel
  * @returns caraousel markup
  */
-  _movieCaraouselMarkup() {
+  _movieCaraouselMarkup(content) {
     return `
         <section class="${content.category}-caraousel caraousel">
           <h3 class="movie-section-head">${content.title}</h3>

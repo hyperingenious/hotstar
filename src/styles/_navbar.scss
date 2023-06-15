@@ -13,21 +13,23 @@ header {
 
 ul {
   color: white;
+  margin-left: 0 !important;
   li {
     display: flex;
     align-items: center;
     padding: 1.1rem 0rem;
     transition: 0.3s;
-    svg {
-      width: 1.4rem;
-      height: 1.4rem;
+    .nav-svg {
+      font-size: 1.4rem;
       margin-right: 1.3rem;
       margin-left: 2rem;
+      color: #9c9d9f;
       transition: 0.3s ease-in-out;
     }
     p {
       font-size: 16px;
       color: #a1a1a3;
+      margin-bottom: 0 !important;
       transition: 0.3s ease-in-out;
     }
   }
@@ -37,8 +39,11 @@ ul {
   transform: translateX(-1.3rem);
 }
 .nav-list:hover {
-  scale: 1.12;
+  .nav-svg{
+    scale: 1.12;
+  }
   p {
+    scale: 1.12;
     color: white;
     font-weight: 600;
   }
