@@ -44,6 +44,7 @@ const infiniteScrollHandler = function () {
   });
   observer.observe(document.querySelector(".footer"));
 };
+
 const controlHash = async function () {
   const hash = window.location.hash;
   if (hash === "#search") {
