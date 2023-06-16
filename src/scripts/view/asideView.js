@@ -5,6 +5,16 @@ class AsideView extends View {
   _parentElement = document.querySelector("header");
 
   /**
+   * Eventlistner will be attached to window fired whenever the hash changes and it calls the handler passed into it
+   * @param {FunctionStringCallback} handler a function will code will be received which will be called
+   */
+  hashMania(handler) {
+    window.addEventListener("hashchange", function () {
+      handler();
+    });
+  }
+
+  /**
    * This can be fixed but I have not decided to fix it yet
    */
   //   svgGlowHandler() {

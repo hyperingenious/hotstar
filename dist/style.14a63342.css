@@ -401,6 +401,8 @@ html, body {
 .other-results .other-result-card .other-result-movie-name {
   font-size: 0.7rem;
   color: white;
+  text-align: center;
+  width: 100px;
 }
 
 * {
