@@ -5,13 +5,17 @@ class AsideView extends View {
   _parentElement = document.querySelector("header");
 
   /**
-   * Eventlistner will be attached to window fired whenever the hash changes and it calls the handler passed into it
+   * Eventlistners will be attached to window fired whenever the hash changes to '#search' or the page loads with '#search' and it calls the handler passed into it
    * @param {FunctionStringCallback} handler a function will code will be received which will be called
    */
   hashMania(handler) {
-    window.addEventListener("hashchange", function () {
-      handler();
-    });
+    const handlers = ["hashchange", "load"];
+
+    handlers.forEach((hand) =>
+      window.addEventListener(hand, function () {
+        handler();
+      })
+    );
   }
 
   /**

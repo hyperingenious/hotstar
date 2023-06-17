@@ -1,10 +1,4 @@
 /* REMOVE THIS, USE YOUR OWN  */
-html,body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, Sans-serif;
-  background-color: $theme-bg;
-}
 .dummy_page {
   height: 200px;
   width: 100%;
@@ -19,7 +13,7 @@ html,body {
   position: relative;
   height: auto;
   background-color: $theme-bg;
-  padding-left: 7rem;
+  padding-left: 7rem;margin-top: auto;
 }
 .footer .col {
   width: 190px;

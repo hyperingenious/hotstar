@@ -9,7 +9,7 @@ class SearchView extends View {
   renderSearchPage() {
     const searchMarkup = `
         <form class="search-bar">
-          <input type="text" class="search-input" placeholder="Search..." />
+          <input type="text" class="search-input" placeholder="Movies, Anime, TV Shows...." />
         </form>
         `;
     this._clearTopBanner();
@@ -20,6 +20,9 @@ class SearchView extends View {
   /**
    * This function is used to add the submit eventHandler to the search bar and whenever the event is fired it calls the handler function passed into it
    * @param {Function} handler takes the handler function as arugment the function is coming from the model..js, and the handler function itself takes 2 arguments. 1. query entered in search bar, 2. takes the code of renderSearchResults function
+   *
+   * @example
+   * searchView.addSearchHandler(function(){console.log('I am handler')})
    */
   addSearchHandler(handler) {
     const searchForm = this._parentElement.querySelector(".search-bar");

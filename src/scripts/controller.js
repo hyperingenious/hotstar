@@ -6,6 +6,7 @@ import { SCROLL_PERCENTAGE, NUM_PRIORITY } from "./config.js";
 import comedyCaraouselView from "./view/comedyCaraouselView.js";
 import dramaCaraouselView from "./view/dramaCaraouselView.js";
 import searchView from "./view/searchView.js";
+import homeView from "./view/homeView.js";
 
 let loadPriority = 0;
 
@@ -46,11 +47,19 @@ const infiniteScrollHandler = function () {
 };
 
 const controlHash = async function () {
-  const hash = window.location.hash;
-  if (hash === "#search") {
+  if (window.location.hash === "#search") {
     searchView.renderSearchPage();
     searchView.addSearchHandler(model.apiCaller);
     // searchView.renderSearchResults(model.state.search)
+  }
+  // If not hash then we set it to default '#home'
+  if (!window.location.hash) {
+    window.location.hash = "#home";
+  }
+  // If hash is '#home' then we render the home page
+  if (window.location.hash === "#home") {
+    console.log("HOME");
+    homeView.renderHome()
   }
 };
 
@@ -65,12 +74,14 @@ const init = function () {
   asideView.hashMania(controlHash);
 
   // 2. Rendering 'action' & 'comedy' section
+  /*
   actionCaraouselView.renderCaraousel(
     model.content[objectIndex(model.content, "action")]
   );
   comedyCaraouselView.renderCaraousel(
     model.content[objectIndex(model.content, "comedy")]
   );
+  */
 
   // 3. to implement infinite scrolling
   infiniteScrollHandler();
