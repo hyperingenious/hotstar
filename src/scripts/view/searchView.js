@@ -16,7 +16,7 @@ class SearchView extends View {
     this._clearTopBanner();
     this._clearAfterHeader();
     this._parentElement.insertAdjacentHTML("afterbegin", searchMarkup);
-    document.querySelector('.search-input').focus()
+    document.querySelector(".search-input").focus();
   }
 
   /**
@@ -89,13 +89,10 @@ class SearchView extends View {
         <div class="other-results">
             ${results
               .map((result) => {
+                if (!result.i?.imageUrl) return;
                 return `
                   <div class="other-result-card">
-                    ${
-                      result?.i
-                        ? `<img src="${result.i.imageUrl}" alt=""/>`
-                        : "Banner is not available"
-                    }
+                    <img src="${result.i.imageUrl}" alt=""/>
                       <span class="other-result-movie-name">${result.l}</span>
                   </div>
                    `;
