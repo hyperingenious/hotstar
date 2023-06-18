@@ -15,5 +15,12 @@
 }
 .error {
   margin: auto;
-  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 10px;
+  }
 }

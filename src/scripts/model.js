@@ -633,8 +633,8 @@ export const apiCaller = async function (query, callback, renderError) {
     const response = await fetch(url, options);
     const result = await response.json();
 
-    if (!result.d[0] || !result[0]?.i) {
-      throw `Couldn't get results for "${result.q.replaceAll("%20", " ")}"`;
+    if (!result.d[0] || !result.d[0]?.i) {
+      throw Error(`Couldn't find "${result.q.replaceAll("%20", " ")}"`);
     }
 
     // 5. putting the fetched data into the state
@@ -648,7 +648,7 @@ export const apiCaller = async function (query, callback, renderError) {
     callback(state.search.topResult, state.search.results);
   } catch (err) {
     console.error(err);
-    renderError(err)
+    renderError(err);
     throw err;
   }
 };

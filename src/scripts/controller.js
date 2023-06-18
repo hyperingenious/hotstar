@@ -2,7 +2,7 @@ import asideView from "../scripts/view/asideView.js";
 import actionCaraouselView from "./view/actionCaraouselView.js";
 import * as model from "./model.js";
 import { objectIndex, findPriority } from "./helpers.js";
-import { SCROLL_PERCENTAGE, NUM_PRIORITY } from "./config.js";
+import { SCROLL_PERCENTAGE, NUM_PRIORITY, API_KEY } from "./config.js";
 import comedyCaraouselView from "./view/comedyCaraouselView.js";
 import dramaCaraouselView from "./view/dramaCaraouselView.js";
 import searchView from "./view/searchView.js";
@@ -59,7 +59,7 @@ const controlHash = async function () {
   // If hash is '#home' then we render the home page
   if (window.location.hash === "#home") {
     console.log("HOME");
-    homeView.renderHome()
+    homeView.renderHome();
   }
 };
 
@@ -90,3 +90,23 @@ if (module.hot) {
   module.hot.accept();
 }
 init();
+/*
+const url = "https://imdb8.p.rapidapi.com/auto-complete?q=endgame";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": `${API_KEY}`,
+    "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
+  },
+};
+const dkdk = async function () {
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+};
+dkdk();
+*/

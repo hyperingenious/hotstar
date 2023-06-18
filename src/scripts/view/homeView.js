@@ -52,7 +52,10 @@ class HomeView extends View {
       </div>
         `;
     this._parentElement.querySelector(".after-header").innerHTML = "";
-    this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    
+    if (!this._parentElement.querySelector(".top-banner")) {
+      this._parentElement.insertAdjacentHTML("afterbegin", markup);
+    }
   }
 }
 export default new HomeView();
