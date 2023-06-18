@@ -1,8 +1,13 @@
 .after-header {
-  // overflow: hidden;
-  background: $theme-bg;
-  padding-left: 7rem;
-  color: $transparent-text;
+  background: #15171e;
+  margin-left: 7rem;
+  color: hsla(0, 0%, 100%, 0.84);
   padding-top: 1rem;
+  /* width: 100%; */
+  display: flex;
   padding-bottom: 1rem;
+  height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
 }

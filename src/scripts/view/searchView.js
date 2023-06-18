@@ -9,12 +9,14 @@ class SearchView extends View {
   renderSearchPage() {
     const searchMarkup = `
         <form class="search-bar">
-          <input type="text" class="search-input" placeholder="Movies, Anime, TV Shows...." />
+        <i class="ph ph-magnifying-glass"></i>
+          <input type="text" class="search-input" placeholder="Movies, shows and more" />
         </form>
         `;
     this._clearTopBanner();
     this._clearAfterHeader();
     this._parentElement.insertAdjacentHTML("afterbegin", searchMarkup);
+    document.querySelector('.search-input').focus()
   }
 
   /**
@@ -28,11 +30,21 @@ class SearchView extends View {
     const searchForm = this._parentElement.querySelector(".search-bar");
     const searchBar = this._parentElement.querySelector(".search-input");
 
-    const renderSearchResults = this.renderSearchResults;
+    const customThis = this;
 
     searchForm.addEventListener("submit", function (e) {
       e.preventDefault();
-      handler(searchBar.value, renderSearchResults);
+      handler(
+        searchBar.value,
+        customThis.renderSearchResults,
+        customThis.renderError
+      );
+
+      // Dirty trick
+      document.querySelector(".error")?.remove();
+      document.querySelector(".results")?.remove();
+      document;
+      customThis.renderSpinner(this._parentElement);
     });
   }
 
@@ -42,8 +54,11 @@ class SearchView extends View {
    * @param {Array} results array contains data about the results releted to searched query
    */
   renderSearchResults(topData, results) {
+    // console.log(topData, results)
     const tempParent = document.querySelector(".after-header");
     console.log(results);
+
+    tempParent.querySelector(".spinner").remove();
 
     if (tempParent.querySelector(".results")) {
       tempParent.querySelector(".results").remove();

@@ -613,7 +613,7 @@ export const content = [
  * @param {string} query reveives the search query
  * @param {Function} callback  function will be called as query is fetched
  */
-export const apiCaller = async function (query, callback) {
+export const apiCaller = async function (query, callback, renderError) {
   // 1. Conversion of user query in url
   const conversionInUrl = query.split(" ").join("%20");
   try {
@@ -633,6 +633,10 @@ export const apiCaller = async function (query, callback) {
     const response = await fetch(url, options);
     const result = await response.json();
 
+    if (!result.d[0] || !result[0]?.i) {
+      throw `Couldn't get results for "${result.q.replaceAll("%20", " ")}"`;
+    }
+
     // 5. putting the fetched data into the state
     const { d: data, q: query } = result;
     state.search.query = query;
@@ -644,6 +648,7 @@ export const apiCaller = async function (query, callback) {
     callback(state.search.topResult, state.search.results);
   } catch (err) {
     console.error(err);
+    renderError(err)
     throw err;
   }
 };
