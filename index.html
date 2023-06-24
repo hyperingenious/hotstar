@@ -2,14 +2,145 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/ico" href="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hotstar</title>
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- scripts -->
+    <script defer type="module" src="src/scripts/controller.js"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- All the imported fonts INTER -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- Font import ends -->
+
+    <link rel="stylesheet" href="src/styles/style.scss" />
   </head>
-  <!-- Importing Icons -->
-  <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <header>
+      <nav>
+        <ul>
+          <li class="profile nav-list">
+            <!-- <svg class="nav-svg"><use href="#profile"></use></svg> -->
+            <i class="nav-svg ph-bold ph-user"></i>
+            <p class="nav-name hidden"><a href="#myspace">My Space</a></p>
+          </li>
+          <li class="search nav-list">
+            <!-- <svg class="nav-svg"><use href="#search"></use></svg> -->
+            <i class="nav-svg ph-bold ph-magnifying-glass"></i>
+            <p class="nav-name hidden"><a href="#search">Search</a></p>
+          </li>
+          <li class="home nav-list">
+            <!-- <svg class="nav-svg"><use href="#home"></use></svg> -->
+            <i class="nav-svg ph-bold ph-house"></i>
+            <p class="nav-name hidden"><a href="#home">Home</a></p>
+          </li>
+          <li class="tv nav-list">
+            <!-- <svg class="nav-svg"><use href="#tv"></use></svg> -->
+            <i class="nav-svg ph-bold ph-television-simple"></i>
+            <p class="nav-name hidden"><a href="#tv">TV</a></p>
+          </li>
+          <li class="movies nav-list">
+            <!-- <svg class="nav-svg"><use href="#movies"></use></svg> -->
+            <i class="nav-svg ph-bold ph-film-slate"></i>
+            <p class="nav-name hidden"><a href="#movies">Movies</a></p>
+          </li>
+          <li class="sports nav-list">
+            <!-- <svg class="nav-svg"><use href="#sports"></use></svg> --><i
+              class="nav-svg ph-bold ph-baseball"
+            ></i>
+            <p class="nav-name hidden"><a href="/sports">Sports</a></p>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    
+
+    <div class="movies-container">
+      <!-- TOP SECTION STARTS- sections which contains all the trailers -->
+      <!-- TOP SECTION ENDS- sections which contains all the trailers -->
+
+
+      
+      <!--======Content section started [content will be inserted dynamaically]======= -->
+      <div class="after-header"></div>
+      <!-- FOOTER START -->
+      <div class="footer">
+        <div class="contain">
+          <div class="col">
+            <h1>Company</h1>
+            <ul>
+              <li>About</li>
+              <li>Mission</li>
+              <li>Services</li>
+              <li>Social</li>
+              <li>Get in touch</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Products</h1>
+            <ul>
+              <li>About</li>
+              <li>Mission</li>
+              <li>Services</li>
+              <li>Social</li>
+              <li>Get in touch</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Accounts</h1>
+            <ul>
+              <li>About</li>
+              <li>Mission</li>
+              <li>Services</li>
+              <li>Social</li>
+              <li>Get in touch</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Resources</h1>
+            <ul>
+              <li>Webmail</li>
+              <li>Redeem code</li>
+              <li>WHOIS lookup</li>
+              <li>Site map</li>
+              <li>Web templates</li>
+              <li>Email templates</li>
+            </ul>
+          </div>
+          <div class="col">
+            <h1>Support</h1>
+            <ul>
+              <li>Contact us</li>
+              <li>Web chat</li>
+              <li>Open ticket</li>
+            </ul>
+          </div>
+          <div class="col social">
+            <h1>Social</h1>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </div>
+      <!-- END OF FOOTER -->
+    </div>
   </body>
 </html>
