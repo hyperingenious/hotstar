@@ -1,0 +1,8 @@
+dist
+node_modules
+./.cache
+js
+api.env
+
+# Images 
+dataShot.png
